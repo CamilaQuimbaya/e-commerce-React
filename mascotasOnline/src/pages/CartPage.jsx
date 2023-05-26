@@ -4,7 +4,7 @@ import React from 'react';
 
 function CartPage () {
     return (
-        <div>
+        <div className='titleComponent'>
             <h1>CartPage</h1>
         </div>
     )
