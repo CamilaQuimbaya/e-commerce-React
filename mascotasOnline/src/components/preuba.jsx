@@ -2,7 +2,7 @@ import React from 'react'
 
 function preuba() {
   return (
-    <div>hola esta es una prueba de ramas en git</div>
+    <div>hola esta es una prueba de ramas</div>
   )
 }
 
