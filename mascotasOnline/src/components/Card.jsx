@@ -11,7 +11,6 @@ const Card = (data) => {
         </div>
         <div className="card-info">
           <p className="text-title">{data.data.title}</p>
-          <p className="text-body">{data.data.description}</p>
         </div>
         <div className="card-footer">
         <span className="text-title">${data.data.price}</span>

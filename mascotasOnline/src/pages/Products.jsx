@@ -14,10 +14,12 @@ function Products () {
     return (
         <div>
             <h1 className='titleComponent'>Products</h1>
-            <div>
+            <div className='row container'>
                 {
                     products?.map(item => (
-                        <Card  key={item.id} data={item}/>
+                        <div key={item.id} className='col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center'>
+                            <Card data={item}/>
+                        </div>
                     ))
                 }
             </div>

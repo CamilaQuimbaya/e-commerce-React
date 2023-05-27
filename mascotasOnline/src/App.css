@@ -56,6 +56,8 @@
     color: white;
     font-weight: bold;
     margin-top: 10px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .img-carrousel{
@@ -63,6 +65,7 @@
 }
 
 .card {
+    margin: 5px;
     width: 190px;
     height: 254px;
     padding: .8em;
@@ -73,11 +76,13 @@
    }
    
    .card-img {
-    background-color: #c1a6ff;
+    background-color: #ffffff;
     height: 40%;
     width: 100%;
     border-radius: .5rem;
     transition: .3s ease;
+    display: flex;
+    justify-content: center;
    }
    
    .card-info {
@@ -101,7 +106,7 @@
    /*Text*/
    .text-title {
     font-weight: 900;
-    font-size: 1.2em;
+    font-size: 0.6rem;
     line-height: 1.5;
    }
    
@@ -131,5 +136,5 @@
     background-color: #daa6ff;
    }
     .dataImg{
-        width: 40px;
+        width: 80px;
     }
