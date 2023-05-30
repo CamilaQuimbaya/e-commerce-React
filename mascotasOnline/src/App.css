@@ -138,3 +138,15 @@
     .dataImg{
         width: 80px;
     }
+
+    .iconCart{
+        margin-left: 5px;
+    }
+
+    .containerCart{
+        width: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }

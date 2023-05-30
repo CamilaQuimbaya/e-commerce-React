@@ -1,8 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React,{useContext} from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/img/loguito.png';
+import cartIcon from '../assets/icons/shoppingCart.svg';
+import { shoppingCartContext } from '../context';
+
 const NavBar  = () => {
+    const context = useContext(shoppingCartContext);
     return (
         <div>
             <nav className="navbar navbar-expand-lg myNavbar">
@@ -38,10 +42,16 @@ const NavBar  = () => {
                         </li>
                         <li className="nav-item">
                         <NavLink className="nav-link" to="/cart">
-                            <button className='navButton'>Carrito</button>
+                            <button className='navButton'>Carrito
+                            <img src={cartIcon} alt="" width="20px" className='iconCart'/>
+                            </button>
                         </NavLink>
                         </li>
                     </ul>
+                    <div className='containerCart'>
+                        <img src={cartIcon} alt="" />
+                        <h2 className='text-white'>{context.count}</h2>
+                    </div>
                     </div>
                 </div>
         </nav>

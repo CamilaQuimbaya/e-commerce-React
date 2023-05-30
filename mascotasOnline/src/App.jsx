@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { useRoutes, BrowserRouter } from 'react-router-dom'
+import { ShoppingCartProvider } from './context';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+
 
 import './App.css'
 import Home from './pages/Home'
@@ -10,6 +12,8 @@ import CartPage from './pages/CartPage'
 import Products from './pages/Products'
 import NotFound from './pages/NotFound'
 import NavBar from './components/NavBar'
+
+
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -26,7 +30,8 @@ const AppRoutes = () => {
 function App() {
 
   return (
-    <BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
       <div className='principalContainer'>
         <NavBar />
         <div className='containerViews'>
@@ -35,6 +40,7 @@ function App() {
       </div>
       
     </BrowserRouter>
+    </ShoppingCartProvider>
   )
 }
 
