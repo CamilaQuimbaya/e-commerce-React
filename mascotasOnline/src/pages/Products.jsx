@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
+import ProductDetails from './ProductDetails';
 
 function Products () {
     const [products, setProducts ] = useState(null)
@@ -23,6 +24,7 @@ function Products () {
                     ))
                 }
             </div>
+            <ProductDetails/>
         </div>
     )
 }
