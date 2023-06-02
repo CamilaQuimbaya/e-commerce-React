@@ -2,12 +2,13 @@
 import React, {useContext} from 'react';
 import OrderCard from '../components/OrderCard';
 import { shoppingCartContext } from '../context';
-
+import { totalPrice, totalconIva } from '../utils';
 
 function CartPage () {
     const context = useContext(shoppingCartContext)
 
     const deleteProduct = (id) => {
+        context.setCount(context.count - 1)
         const filteredProducts = context.cartProducts.filter(product => product.id !== id)
         context.setCartProducts(filteredProducts)
     }
@@ -15,6 +16,18 @@ function CartPage () {
     return (
         <div className='titleComponent'>
             <h1>Carrito</h1>
+            <div className="card2 checkout">
+                <label className="title2">Checkout</label>
+                <div className="details">
+                    <span>Your total:</span>
+                    <span>${totalPrice(context.cartProducts)}</span>
+                </div>
+                <div className="checkout--footer">
+                <span>Your total IVA:</span>
+                    <label className="price"><sup>$</sup>${totalconIva(context.cartProducts)}</label>
+                    <button className="checkout-btn">Checkout</button>
+                </div>
+            </div>
             <div className='d-flex row'>
                 {
                     context.cartProducts.map(product =>  (
